@@ -3,6 +3,7 @@ const pxToRemRootValue = 16,  // 1rem = 16px
       pageMaxWidth     = 1024 // 页面最宽放大到（px）
 
 document.body.style.minWidth = `${designWidth/16}rem`
+document.body.style.maxWidth = `${pageMaxWidth/16}rem`
 
 // 设置hmtl的字体大小
 const setHtmlFontSize = () => {
