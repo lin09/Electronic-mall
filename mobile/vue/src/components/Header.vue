@@ -35,7 +35,6 @@ export default {
     }
   },
   beforeMount() {
-    console.log(123)
     window.addEventListener('scroll', this.toggle)
   },
   beforeDestroy() {
@@ -59,9 +58,9 @@ export default {
     align-items: center;
     margin: 0 auto;
     padding-bottom: 20px;
-    max-width: 1024px;
+    width: 750px;
     background-color: rgb(255, 0, 54);
-    transition: all 300ms ease;
+    transition: transform 300ms ease;
     transform: translateY(0);
   }
   .menu {
@@ -73,7 +72,7 @@ export default {
     align-items: center;
     padding: 0 24px;
     height: 88px;
-    transition: all 300ms ease;
+    transition: transform 300ms ease;
     transform: translateY(0);
   }
   .menu-icon {
@@ -91,7 +90,7 @@ export default {
     height: 88px;
     font-size: 36px;
     color: #fff;
-    transition: all 300ms ease;
+    transition: transform 300ms ease;
     transform: scale(1);
   }
   .search {
@@ -101,17 +100,22 @@ export default {
     width: 710px;
     height: 72px;
     background-color: #fff;
-    transition: all 300ms ease;
+    transition: transform 300ms ease;
+    transform: scaleX(1);
   }
   .search-icon {
     margin: 20px;
     width: 29px;
     height: 32px;
     opacity: 0.3;
+    transition: transform 300ms ease;
+    transform: scaleX(1);
   }
   .search-text {
     font-size: 28px;
     color: rgba(0, 0, 0, 0.5);
+    transition: transform 300ms ease;
+    transform: scaleX(1);
   }
   .mini-header {
     .fixed {
@@ -124,7 +128,13 @@ export default {
       transform: scale(0);
     }
     .search {
-      width: 568px;
+      transform: scaleX(0.8);
+    }
+    .search-icon {
+      transform: scaleX(1.25) translateX(8px);
+    }
+    .search-text {
+      transform: scaleX(1.25) translateX(35px);
     }
   }
 </style>
