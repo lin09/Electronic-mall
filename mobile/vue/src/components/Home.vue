@@ -1,6 +1,8 @@
 <template>
   <div class="home-page">
     <Header />
+    <ToTop />
+    <p>home</p>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -10,10 +12,13 @@
 
 <script>
 import Header from './Header'
+import ToTop from './ToTop'
+
 export default {
   name: 'Home',
   components: {
-    Header
+    Header,
+    ToTop
   }
 }
 </script>
