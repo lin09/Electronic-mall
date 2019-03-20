@@ -69,7 +69,9 @@ time,
 tr,
 ul,
 var,
-video {
+video,
+input,
+button {
   margin: 0;
   padding: 0;
   border: 0;
@@ -80,8 +82,22 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0 auto;
+  font-size: 32px;
 }
 
 a {
   text-decoration: none;
+}
+
+input, textarea, select, button {
+  font-size: 32px;
+  outline: 0;
+}
+
+input {
+  flex-grow: 1;
+
+  &:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px white inset !important;
+  }
 }

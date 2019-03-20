@@ -1,5 +1,5 @@
 <template>
-  <div class="to-top" :class="{ 'active': isShow }" @click="toTop">
+  <div class="to-top" :class="{ 'active': visible }" @click="toTop">
     <ToTopIcon />
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
   name: 'ToTop',
   data() {
     return {
-      isShow: false,
+      visible: false,
       oldY: window.pageYOffset
     }
   },
@@ -21,9 +21,9 @@ export default {
   methods: {
     toggle () {
       if (window.pageYOffset < 50) {
-        this.isShow = false
-      } else if (!this.isShow && this.oldY > window.pageYOffset) {
-        this.isShow = true
+        this.visible = false
+      } else if (!this.visible && this.oldY > window.pageYOffset) {
+        this.visible = true
       }
       this.oldY = window.pageYOffset
     },

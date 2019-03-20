@@ -3,7 +3,7 @@
     <div class="fixed">
       <div class="menu">
         <MenuIcon class="menu-icon" />
-        <a class="login" href="">登录</a>
+        <router-link :to="{ name: 'login' }" class="login">登录</router-link>
       </div>
       <div class="logo">EMALL</div>
       <a class="search">
@@ -46,7 +46,7 @@ export default {
 
 <style lang="scss" scoped>
   header {
-    height: 180px;
+    height: 182px;
   }
   .fixed {
     position: fixed;
