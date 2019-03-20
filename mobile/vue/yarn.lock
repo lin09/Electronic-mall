@@ -676,6 +676,11 @@
     cssnano-preset-default "^4.0.0"
     postcss "^7.0.0"
 
+"@lin09/adaptivejs@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@lin09/adaptivejs/-/adaptivejs-1.0.1.tgz#4c22b28c6dbf4f3cad1ea482305f88e1dfc11dd1"
+  integrity sha512-JDHa0lSteZxqi0HYjOLnxRsy2qlBWXgnJSzyCUHNfCuNagm1kYtoOooi631wtp4nnJU7ZdjtqcWuk/A2IWd+Lw==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "http://registry.npm.taobao.org/@mrmlnc/readdir-enhanced/download/@mrmlnc/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"

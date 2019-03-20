@@ -1,8 +1,10 @@
 import './default.scss'
-import './meta.js'
 import Vue    from 'vue'
 import App    from './App.vue'
 import router from './router'
+import adaptive from '@lin09/adaptivejs'
+
+adaptive.run()
 
 Vue.config.productionTip = false
 
