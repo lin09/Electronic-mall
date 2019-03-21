@@ -31,7 +31,7 @@ export default {
       window.scrollTo(0,0)
     }
   },
-  beforeMount() {
+  mounted() {
     window.addEventListener('scroll', this.toggle)
   },
   beforeDestroy() {
