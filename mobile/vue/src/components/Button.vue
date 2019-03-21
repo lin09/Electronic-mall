@@ -1,5 +1,5 @@
 <template>
-  <button :type="type" :disabled="disabled" :class="theme">
+  <button :type="type" :disabled="disabled" :class="theme" @click="handleClick">
     <slot></slot>
   </button>
 </template>
@@ -20,6 +20,11 @@ export default {
       type: String,
       default: 'red'
     }
+  },
+  methods: {
+    handleClick (e) {
+      this.$emit('click', e)
+    }
   }
 }
 </script>
@@ -31,10 +36,17 @@ button {
   align-items: center;
   border-radius: 5px;
   height: 94px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 
   &.red {
     background-color: rgb(255, 0, 54);
     color: #fff;
+  }
+
+  &.white {
+    background-color: white;
+    color: rgb(255, 0, 54);
   }
 
   &:disabled {
