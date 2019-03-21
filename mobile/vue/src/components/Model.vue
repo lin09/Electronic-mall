@@ -10,7 +10,7 @@
  *   @cancel="handleCancel"  // 点击取消的回调
  *   @visibleChange="handleVisibleChange"    // 显示状态发生变化时触发，返回值 true / false
  *   width="80%"             // 默认弹窗宽度80%
- *   align="top"             // 对齐窗口，默认垂直左右居中。可选择值：'top', 'right', 'bottom', 'left', 'top right'（两个组合）
+ *   align="top"             // 对齐窗口，默认垂直左右居中。可选择值：全屏'fullscreen', 上对齐'top', 'right', 'bottom', 'left', 右上角对齐'top right'（两个组合）
  * >内容</
  */
 <template>
@@ -71,7 +71,6 @@ export default {
   watch: {
     value (val) {
       this.visible = val;
-      console.log(this.fullscreen)
     },
     visible (val) {
       this.$emit('visibleChange', val);

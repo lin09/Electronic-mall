@@ -54,6 +54,10 @@ export default {
   align-items: stretch;
   flex-grow: 1;
   padding-right: 10px;
+
+  input {
+    width: 100%;
+  }
 }
 
 .clear {

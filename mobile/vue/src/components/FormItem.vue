@@ -38,6 +38,7 @@ export default {
 .label {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   padding-left: 20px;
   color: #6c6c6c;
 }
