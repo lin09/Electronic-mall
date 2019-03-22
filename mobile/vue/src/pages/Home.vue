@@ -12,17 +12,19 @@
       </section>
       <Activity />
       <Ranking />
+      <Recommend />
     </main>
   </div>
 </template>
 
 <script>
 import ImageScroll from '@lin09/image-scroll-vue'
-import Header from '@/components/Header'
-import ToTop from '@/components/ToTop'
-import HomeNav from '@/components/home/Nav'
-import Activity from '@/components/home/Activity'
-import Ranking from '@/components/home/Ranking'
+import Header      from '@/components/Header'
+import ToTop       from '@/components/ToTop'
+import HomeNav     from '@/components/home/Nav'
+import Activity    from '@/components/home/Activity'
+import Ranking     from '@/components/home/Ranking'
+import Recommend   from '@/components/home/Recommend'
 
 export default {
   name: 'Home',
@@ -32,7 +34,8 @@ export default {
     ToTop,
     HomeNav,
     Activity,
-    Ranking
+    Ranking,
+    Recommend
   },
   data() {
     return {
