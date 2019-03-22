@@ -48,6 +48,7 @@ export default {
   margin-left: 277px;
   opacity: 0;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   transition: all 300ms ease;
   transform: translateY(0);
   z-index: 1000;

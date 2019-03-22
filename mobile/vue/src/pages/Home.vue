@@ -4,13 +4,14 @@
     <ToTop />
     <main>
       <HomeNav />
-      <ImageScroll :images="images" height="292px" />
+      <ImageScroll :images="images"/>
       <section class="ad">
         <a href="#">
           <img class="ad-image" src="https://gw.alicdn.com/tfs/TB1EFA.AxTpK1RjSZR0XXbEwXXa-750-365.png_790x10000.jpg_.webp" alt="">
         </a>
       </section>
       <Activity />
+      <Ranking />
     </main>
   </div>
 </template>
@@ -21,6 +22,7 @@ import Header from '@/components/Header'
 import ToTop from '@/components/ToTop'
 import HomeNav from '@/components/home/Nav'
 import Activity from '@/components/home/Activity'
+import Ranking from '@/components/home/Ranking'
 
 export default {
   name: 'Home',
@@ -29,7 +31,8 @@ export default {
     Header,
     ToTop,
     HomeNav,
-    Activity
+    Activity,
+    Ranking
   },
   data() {
     return {
@@ -49,9 +52,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.image-scroll {
-  box-shadow: 0 20px 60px -30px rgba(0,0,0,0.7);
-}
 .ad {
   margin-top: 30px;
 }

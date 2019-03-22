@@ -92,6 +92,7 @@ export default {
   position: relative;
   margin-top: 12px;
   width: 344px;
+  height: 257px;
   border-radius: 8px;
   background-color: #f8f8f8;
   overflow: hidden;

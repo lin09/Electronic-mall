@@ -174,6 +174,7 @@ export default {
   align-items: center;
   z-index: 4101;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .modal-body {
