@@ -77,7 +77,7 @@ export default {
 .content {
   border: 1px solid rgb(237, 237, 237);
   .image {
-    width: 336px;
+    width: 100%;
     height: 336px;
     background-color: rgba(0, 0, 0, 0.03);
     background-repeat: no-repeat;

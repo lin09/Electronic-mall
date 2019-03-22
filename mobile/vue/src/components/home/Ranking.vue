@@ -217,10 +217,10 @@ export default {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 12px;
     .item {
       display: flex;
       justify-content: space-between;
+      margin-top: 12px;
       align-items: center;
       width: 345px;
       height: 169px;
