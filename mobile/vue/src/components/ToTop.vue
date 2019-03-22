@@ -50,6 +50,7 @@ export default {
   cursor: pointer;
   transition: all 300ms ease;
   transform: translateY(0);
+  z-index: 1000;
 
   &.active {
     opacity: 1;

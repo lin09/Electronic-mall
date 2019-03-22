@@ -5,23 +5,31 @@
     <main>
       <HomeNav />
       <ImageScroll :images="images" height="292px" />
+      <section class="ad">
+        <a href="#">
+          <img class="ad-image" src="https://gw.alicdn.com/tfs/TB1EFA.AxTpK1RjSZR0XXbEwXXa-750-365.png_790x10000.jpg_.webp" alt="">
+        </a>
+      </section>
+      <Activity />
     </main>
   </div>
 </template>
 
 <script>
+import ImageScroll from '@lin09/image-scroll-vue'
 import Header from '@/components/Header'
 import ToTop from '@/components/ToTop'
 import HomeNav from '@/components/home/Nav'
-import ImageScroll from '@lin09/image-scroll-vue'
+import Activity from '@/components/home/Activity'
 
 export default {
   name: 'Home',
   components: {
+    ImageScroll,
     Header,
     ToTop,
     HomeNav,
-    ImageScroll
+    Activity
   },
   data() {
     return {
@@ -39,3 +47,17 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.image-scroll {
+  box-shadow: 0 20px 60px -30px rgba(0,0,0,0.7);
+}
+.ad {
+  margin-top: 30px;
+}
+.ad-image {
+  width: 750px;
+  height: 365px;
+}
+</style>
+
