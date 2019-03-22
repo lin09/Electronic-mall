@@ -3,7 +3,10 @@
     <div class="fixed">
       <div class="menu">
         <MenuIcon class="menu-icon" />
-        <router-link :to="{ name: 'login' }" class="login">登录</router-link>
+        <router-link v-if="!isLogin" :to="{ name: 'login' }" class="login">登录</router-link>
+        <div v-if="isLogin" class="user-icon" @click="handleShowUserNav">
+          <UserIcon class="icon"/>
+        </div>
       </div>
       <div class="logo">EMALL</div>
       <a class="search">
@@ -11,30 +14,44 @@
         <span class="search-text">搜索商品、品牌</span>
       </a>
     </div>
+    <UserNav v-model="showUserNav" />
   </header>
 </template>
 
 <script>
+import Cookies from 'js-cookie'
 import MenuIcon from './icons/Menu'
 import SearchIcon from './icons/Search'
+import UserIcon from './icons/User'
+import UserNav from './UserNav'
 
 export default {
   name: 'Header',
   data() {
     return {
-      isMini: false
+      isMini: false,
+      isLogin: false,
+      showUserNav: false
     }
   },
   components: {
     MenuIcon,
-    SearchIcon
+    SearchIcon,
+    UserIcon,
+    UserNav
   },
   methods: {
     toggle () {
       this.isMini = window.pageYOffset > 100
+    },
+    handleShowUserNav () {
+      this.showUserNav = true
     }
   },
-  beforeMount() {
+  created () {
+    this.isLogin = Cookies.get('token')
+  },
+  mounted () {
     window.addEventListener('scroll', this.toggle)
   },
   beforeDestroy() {
@@ -136,6 +153,16 @@ export default {
     }
     .search-text {
       transform: scaleX(1.25) translateX(35px);
+    }
+  }
+  .user-icon {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    .icon {
+      width: 60px;
+      height: 60px;
     }
   }
 </style>

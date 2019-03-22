@@ -15,11 +15,11 @@
  */
 <template>
   <div v-show="visible" class="modal" :class="align" @click="handleMask">
-    <div class="scroll" :style="{ width: width }">
+    <div class="scroll" :style="{ width: width, 'margin-top': top }">
       <div class="modal-content" @click.stop>
         <div v-if="title" class="modal-header">
           {{ title }}
-          <div v-if="closable" class="modal-close" @click="close">X</div>
+          <div v-if="closable" class="modal-close" @click="close"><TimesIcon class="close-icon"/></div>
         </div>
 
         <div class="modal-body">
@@ -37,10 +37,11 @@
 
 <script>
 import Button from './Button'
+import TimesIcon from './icons/Times'
 
 export default {
   name: 'Modal',
-  components: { Button },
+  components: { Button, TimesIcon },
   props: {
     value: {
       type: Boolean,
@@ -61,37 +62,45 @@ export default {
     title: String,
     okText: String,
     cancelText: String,
-    align: String
+    align: String,
+    top: String
   },
   data () {
     return {
-      visible: this.value
-    };
+      visible: this.value,
+      bodyOverflow: ''
+    }
   },
   watch: {
     value (val) {
-      this.visible = val;
+      this.visible = val
+      if (val) {
+        this.bodyOverflow = document.body.style.overflow
+        document.body.style.overflow = 'hidden'
+      } else {
+        document.body.style.overflow = this.bodyOverflow
+      }
     },
     visible (val) {
-      this.$emit('visibleChange', val);
+      this.$emit('visibleChange', val)
     },
   },
   methods: {
     close () {
-      this.visible = false;
-      this.$emit('input', false);
-      this.$emit('cancel');
+      this.visible = false
+      this.$emit('input', false)
+      this.$emit('cancel')
     },
     handleMask () {
       if (this.maskClosable) {
-        this.close();
+        this.close()
       }
     },
     ok () {
-      this.$emit('ok');
+      this.$emit('ok')
     },
     cancel () {
-      this.close();
+      this.close()
     }
   }
 }
@@ -126,10 +135,19 @@ export default {
   &.left {
     justify-content: flex-start;
   }
+  &.right.left {
+    .scroll {
+      width: 100% !important;
+      .modal-content {
+        border-radius: 0;
+        min-width: 100%;
+      }
+    }
+  }
   &.fullscreen {
     .scroll {
-      width: 100%;
-      height: 100%;
+      width: 100% !important;
+      height: 100% !important;
 
       .modal-content {
         border-radius: 0;
@@ -149,11 +167,10 @@ export default {
 .modal-content {
   display: flex;
   flex-direction: column;
-  border-radius: 15px;
-  overflow: hidden;
+  margin: 20px auto;
   background-color: #fff;
+  border-radius: 15px;
 }
-
 
 .modal-header {
   position: relative;
@@ -161,6 +178,11 @@ export default {
   line-height: 90px;
   text-align: center;
   color: #333;
+  border-radius: 15px 15px 0 0;
+
+  & + .modal-body {
+    border-radius: 0;
+  }
 }
 
 .modal-close {
@@ -177,10 +199,16 @@ export default {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+.close-icon {
+  width: 28px;
+  height: 28px;
+}
+
 .modal-body {
   flex-grow: 1;
   padding: 25px 45px;
   background: #fff;
+  border-radius: 15px 15px 0 0;
 }
 
 .modal-footer {
@@ -188,6 +216,8 @@ export default {
   align-items: stretch;
   height: 110px;
   border-top: 1px solid #d8d8d8;
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
 
   .btn {
     border-radius: 0;

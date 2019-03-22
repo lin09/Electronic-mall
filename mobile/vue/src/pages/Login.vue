@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import Cookies from 'js-cookie'
 import FormItem from '@/components/FormItem'
 import Input from '@/components/Input'
 import Button from '@/components/Button'
@@ -63,8 +64,15 @@ export default {
   },
   methods: {
     handleSubmit () {
-      this.modelMsg = '账号或密码错误'
+      // this.modelMsg = '账号或密码错误'
+      this.modelMsg = '登录成功'
       this.visibleModel = true
+
+      Cookies.set('token', 'dasdfasfasfadfsafsadfsdfadgagds')
+
+      setTimeout(() => {
+        this.$router.replace('/')
+      }, 500)
     },
     getMsg () {
       if (this.msgTime) {
