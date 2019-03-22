@@ -53,9 +53,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.recommend {
-
-}
 .heading {
   display: block;
   width: 750px;
