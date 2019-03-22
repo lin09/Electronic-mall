@@ -62,6 +62,7 @@ export default {
     background-color: rgb(255, 0, 54);
     transition: transform 300ms ease;
     transform: translateY(0);
+    z-index: 1000;
   }
   .menu {
     position: absolute;
