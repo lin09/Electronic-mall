@@ -1,18 +1,19 @@
 <template>
   <div class="home-page">
-    <Header />
-    <ToTop />
+    <Header/>
+    <ToTop/>
     <main>
-      <HomeNav />
+      <HomeNav/>
       <ImageScroll :images="images"/>
       <section class="ad">
         <a href="#">
           <img class="ad-image" src="https://gw.alicdn.com/tfs/TB1EFA.AxTpK1RjSZR0XXbEwXXa-750-365.png_790x10000.jpg_.webp" alt="">
         </a>
       </section>
-      <Activity />
-      <Ranking />
-      <Recommend />
+      <Activity/>
+      <Ranking/>
+      <Recommend/>
+      <GoApp/>
     </main>
   </div>
 </template>
@@ -25,6 +26,7 @@ import HomeNav     from '@/components/home/Nav'
 import Activity    from '@/components/home/Activity'
 import Ranking     from '@/components/home/Ranking'
 import Recommend   from '@/components/home/Recommend'
+import GoApp       from '@/components/home/GoApp'
 
 export default {
   name: 'Home',
@@ -35,7 +37,8 @@ export default {
     HomeNav,
     Activity,
     Ranking,
-    Recommend
+    Recommend,
+    GoApp
   },
   data() {
     return {
