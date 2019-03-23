@@ -1,6 +1,6 @@
 <template>
   <section class="shop" :style="'background-image: url(https://img.alicdn.com/imgextra/i4/2616970884/O1CN01F9SdBx1IOubmkI0ND_!!2616970884.jpg_q90.jpg)'">
-    <router-link to='tabnav' class="sort">分类</router-link>
+    <router-link to='shop-sort' class="sort">分类</router-link>
     <div class="shop-info">
       <div class="logo" :style="'background-image: url(https://img.alicdn.com/imgextra/i1/2616970884/TB2RdcVef5TBuNjSspcXXbnGFXa-2616970884.jpg)'"></div>
       <div class="shop-name-content">
@@ -48,9 +48,24 @@ export default {
     position: relative;
     z-index: 1;
     align-self: flex-end;
-    margin-top: 24px;
+    margin-top: 28px;
     margin-right: 90px;
     line-height: 50px;
+    color: #fff;
+    &::after {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      right: -57px;
+      bottom: 0;
+      display: inline-block;
+      margin: auto;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #5F646E;
+      box-shadow: -16px 0 0 0 #5F646E, -32px 0 0 0 #5F646E;
+    }
   }
   .shop-info {
     position: relative;

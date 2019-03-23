@@ -1,6 +1,6 @@
 <template>
   <div class="input-item">
-    <input v-model="model" :type="type" :placeholder="placeholder" :disabled="disabled">
+    <input v-model="model" :type="type" :placeholder="placeholder" :disabled="disabled" ref="input">
     <i v-show="model" class="clear" @click="handleClear">
       <ClearIcon class="clear-icon"/>
     </i>
@@ -42,7 +42,8 @@ export default {
   },
   methods: {
     handleClear () {
-      this.$emit('input', '')
+      this.model = ''
+      this.$refs.input.focus()
     }
   }
 }
@@ -57,6 +58,7 @@ export default {
 
   input {
     width: 100%;
+    background-color: transparent;
   }
 }
 
@@ -64,6 +66,7 @@ export default {
   display: none;
   justify-content: center;
   align-items: center;
+  align-self: center;
   width: 50px;
   height: 50px;
   cursor: pointer;
