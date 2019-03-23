@@ -1,9 +1,9 @@
 <template>
   <nav>
-    <a class="link" v-for="(item, index) in navList" :key="index" :href="item.url">
+    <router-link class="link" v-for="(item, index) in navList" :key="index" :to="item.url">
       <img :src="item.logoUrl" :alt="item.text">
       <span>{{ item.text }}</span>
-    </a>
+    </router-link>
   </nav>
 </template>
 
@@ -34,7 +34,7 @@ export default {
           text: '巨划算'
         },
         {
-          url: '',
+          url: 'tabnav',
           logoUrl: 'https://gw.alicdn.com/tfs/TB12CFXSFXXXXcpapXXXXXXXXXX-146-147.png_110x10000.jpg_.webp',
           text: '分类'
         }

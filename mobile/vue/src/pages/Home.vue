@@ -29,7 +29,7 @@ import Recommend   from '@/components/home/Recommend'
 import GoApp       from '@/components/home/GoApp'
 
 export default {
-  name: 'Home',
+  name: 'HomePage',
   components: {
     ImageScroll,
     Header,

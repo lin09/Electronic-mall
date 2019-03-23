@@ -25,6 +25,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   border-bottom: 1px solid #c8c8c8;
   height: 89px;
   background-color: #f7f7f7;

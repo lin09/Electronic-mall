@@ -2,7 +2,9 @@
   <header :class="{ 'mini-header': isMini }">
     <div class="fixed">
       <div class="menu">
-        <MenuIcon class="menu-icon" />
+        <router-link to="tabnav">
+          <MenuIcon class="menu-icon" />
+        </router-link>
         <router-link v-if="!isLogin" :to="{ name: 'login' }" class="login">登录</router-link>
         <div v-if="isLogin" class="user-icon" @click="handleShowUserNav">
           <UserIcon class="icon"/>
@@ -19,11 +21,11 @@
 </template>
 
 <script>
-import Cookies from 'js-cookie'
-import MenuIcon from './icons/Menu'
+import Cookies    from 'js-cookie'
+import MenuIcon   from './icons/Menu'
 import SearchIcon from './icons/Search'
-import UserIcon from './icons/User'
-import UserNav from './UserNav'
+import UserIcon   from './icons/User'
+import UserNav    from './UserNav'
 
 export default {
   name: 'Header',

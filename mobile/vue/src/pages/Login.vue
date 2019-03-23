@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div class="login-page">
     <TitleHeader title="账号登录"/>
 
     <form class="form" method="post" @submit.prevent="handleSubmit">
@@ -28,15 +28,15 @@
 </template>
 
 <script>
-import Cookies from 'js-cookie'
-import FormItem from '@/components/FormItem'
-import Input from '@/components/Input'
-import Button from '@/components/Button'
-import Model from '@/components/Model'
+import Cookies     from 'js-cookie'
+import FormItem    from '@/components/FormItem'
+import Input       from '@/components/Input'
+import Button      from '@/components/Button'
+import Model       from '@/components/Model'
 import TitleHeader from '@/components/TitleHeader'
 
 export default {
-  name: 'Login',
+  name: 'LoginPage',
   data() {
     return {
       formData: {
@@ -94,7 +94,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.login {
+.login-page {
   min-height: 100vh;
   background-color: #f0f0f0;
 }
