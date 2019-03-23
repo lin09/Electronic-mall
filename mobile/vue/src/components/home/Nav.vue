@@ -14,7 +14,7 @@ export default {
     return {
       navList: [
         {
-          url: '',
+          url: 'shop',
           logoUrl: 'https://gw.alicdn.com/tfs/TB1ISdWSFXXXXbFXXXXXXXXXXXX-146-147.png_110x10000.jpg_.webp',
           text: '苏丁易购'
         },

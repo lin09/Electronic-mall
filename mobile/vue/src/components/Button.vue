@@ -1,5 +1,5 @@
 <template>
-  <button :type="type" :disabled="disabled" :class="theme" @click="handleClick">
+  <button class="btn" :type="type" :disabled="disabled" :class="theme" @click="handleClick">
     <slot></slot>
   </button>
 </template>
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-button {
+.btn {
   display: flex;
   justify-content: center;
   align-items: center;
