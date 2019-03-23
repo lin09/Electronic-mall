@@ -1,10 +1,6 @@
 <template>
   <div class="shop-sort-page">
-    <section class="search-bar">
-      <div class="goback" @click="$router.back()"><ArrowLeftIcon class="arrow-icon"/></div>
-      <Input class="input" placeholder="宝贝关键字"/>
-      <SearchIcon class="searh-icon"/>
-    </section>
+    <SearchBar v-model="keyword" @submit="handleSearch" placeholder="宝贝关键字"/>
     <a href="" class="go-all-product">全部宝贝<ArrowRightIcon class="icon"/></a>
     <section class="sort-list" v-for="(item, index) in data" :key="index">
       <a class="title">{{ item.title }}<span>查看全部</span></a>
@@ -16,10 +12,8 @@
 </template>
 
 <script>
-import ArrowLeftIcon from '@/components/icons/ArrowLeft'
 import ArrowRightIcon from '@/components/icons/ArrowRight'
-import SearchIcon from '@/components/icons/Search'
-import Input from '@/components/Input'
+import SearchBar      from '@/components/SearchBar'
 
 const data = []
 for (let i = 0; i < 10; i ++) {
@@ -34,12 +28,18 @@ for (let i = 0; i < 10; i ++) {
 
 export default {
   name: 'ShopSortPage',
-  components: { ArrowLeftIcon, ArrowRightIcon, Input, SearchIcon },
+  components: { SearchBar, ArrowRightIcon },
   data() {
     return {
-      data
+      data,
+      keyword: ''
     }
   },
+  methods: {
+    handleSearch () {
+      // console.log(this.keyword)
+    }
+  }
 }
 </script>
 
@@ -47,36 +47,6 @@ export default {
 .shop-sort-page {
   min-height: 100vh;
   background-color: rgb(238, 238, 238);
-}
-.search-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-  background-color: #fff;
-  .goback {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    cursor: pointer;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-  }
-  .arrow-icon {
-    width: 25px;
-  }
-  .input {
-    padding: 0 20px;
-    height: 60px;
-    border-radius: 4px;
-    background-color: #eee;
-    font-size: 28px !important;
-  }
-  .searh-icon {
-    margin: 0 20px;
-    width: 40px;
-    opacity: 0.6;
-  }
 }
 .go-all-product {
   display: flex;

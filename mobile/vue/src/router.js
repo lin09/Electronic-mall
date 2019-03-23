@@ -6,6 +6,7 @@ import Register  from './pages/Register'
 import TabNav    from './pages/TabNav'
 import Shop      from './pages/Shop'
 import ShopSort  from './pages/ShopSort'
+import Search    from './pages/Search'
 
 Vue.use(VueRouter)
 
@@ -16,6 +17,7 @@ export default new VueRouter({
     { path: '/register', name: 'register', component: Register },
     { path: '/tabnav', name: 'tabnav', component: TabNav },
     { path: '/shop', name: 'shop', component: Shop },
-    { path: '/shop-sort', name: 'shop-sort', component: ShopSort }
+    { path: '/shop-sort', name: 'shop-sort', component: ShopSort },
+    { path: '/search', name: 'search', component: Search }
   ]
 })

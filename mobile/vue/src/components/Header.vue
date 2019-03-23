@@ -11,10 +11,10 @@
         </div>
       </div>
       <div class="logo">EMALL</div>
-      <a class="search">
+      <router-link class="search" to="search">
         <SearchIcon class="search-icon"/>
         <span class="search-text">搜索商品、品牌</span>
-      </a>
+      </router-link>
     </div>
     <UserNav v-model="showUserNav" />
   </header>
