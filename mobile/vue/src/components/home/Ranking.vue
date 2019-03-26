@@ -3,7 +3,7 @@
     <div class="title">榜单</div>
     <div class="front-row">
       <a class="item" v-for="(item, index) in frontList" :key="index" :href="item.href">
-        <RankingIcon class="icon"/>
+        <Medal1Icon class="icon" text="趋势榜"/>
         <div class="content">
           <img class="image" :src="item.imgUrl" alt="">
           <div class="title">{{ item.title }}</div>
@@ -13,8 +13,8 @@
     </div>
     <div class="prestige">
       <div class="no-1">
-        <Prestige class="icon" />
         <div>
+          <Medal2Icon class="tag" text="人气榜"/>
           <div class="title">超值可充气火机榜</div>
           <div class="value">月销1787件</div>
         </div>
@@ -38,12 +38,12 @@
 
 <script>
 import ImageScroll from '@lin09/image-scroll-vue'
-import RankingIcon from '@/components/icons/Ranking'
-import Prestige from '@/components/icons/Prestige'
+import Medal1Icon from '@/components/icons/Medal1'
+import Medal2Icon from '@/components/icons/Medal2'
 
 export default {
   name: 'HomeRanking',
-  components: { RankingIcon, ImageScroll, Prestige },
+  components: { Medal1Icon, ImageScroll, Medal2Icon },
   data() {
     return {
       frontList: [
@@ -143,6 +143,8 @@ export default {
     position: absolute;
     top: 0;
     left: 12px;
+    width: 63px;
+    height: 50px;
   }
 
   .content {
@@ -182,23 +184,19 @@ export default {
 .prestige {
   margin-top: 26px;
   .no-1 {
-    position: relative;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding-left: 26px;
     height: 169px;
     border-radius: 6px;
     background-color: rgb(248, 248, 248);
     font-size: 24px;
-    .icon {
-      position: absolute;
-      top: 0;
-      left: 26px;
+    .tag {
       width: 92px;
       height: 43px;
     }
     .title {
+      margin-top: 10px;
       font-weight: bold;
       color: rgb(49, 49, 49);
     }
@@ -206,6 +204,7 @@ export default {
       color: rgb(153, 153, 153);
     }
     .images {
+      align-self: center;
       width: 422px;
       height: 130px;
     }

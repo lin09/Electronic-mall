@@ -61,6 +61,7 @@ export default {
   font-size: 28px;
   .icon {
     width: 20px;
+    color: #999;
   }
 }
 .sort-list {

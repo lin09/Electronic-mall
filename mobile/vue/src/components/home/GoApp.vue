@@ -1,18 +1,18 @@
 <template>
   <section class="go-app">
     <div class="btn">
-      前往手机APP&nbsp;&nbsp;查看更多 <ArrowRightRedIcon class="icon" />
+      前往手机APP&nbsp;&nbsp;查看更多 <ArrowRightIcon class="icon" />
     </div>
     <p class="info">新人还可领<span>￥10-15元</span>无门槛红包哦</p>
   </section>
 </template>
 
 <script>
-import ArrowRightRedIcon from '@/components/icons/ArrowRightRed'
+import ArrowRightIcon from '@/components/icons/ArrowRight'
 
 export default {
   name: 'HomeGoApp',
-  components: { ArrowRightRedIcon }
+  components: { ArrowRightIcon }
 }
 </script>
 
@@ -37,6 +37,7 @@ export default {
   line-height: 28px;
   letter-spacing: 1px;
   .icon {
+    width: 13px;
     margin-left: 10px;
   }
 }

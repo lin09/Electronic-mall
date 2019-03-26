@@ -3,7 +3,7 @@
     <a href="" class="heading"></a>
     <div class="items">
       <div class="item" v-for="(item, index) in list" :key="index">
-        <div class="content">
+        <router-link class="content" to="detail">
           <div class="image" :style="'background-image: url(' + item.imgUrl + ')'"></div>
           <div class="tag">{{ item.tag }}</div>
           <div class="title">{{ item.title }}</div>
@@ -12,13 +12,13 @@
             <span>￥{{ item.price }}</span>
             <a class="btn">看相似</a>
           </div>
-        </div>
+        </router-link>
         <div class="footer">
           <div>
             <div class="title">预计使用新人红包后</div>
             <div class="price">￥{{ item.newcomerPrice }}</div>
           </div>
-          <ArrowRightRedIcon />
+          <ArrowRightIcon class="icon" />
         </div>
       </div>
     </div>
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import ArrowRightRedIcon from '@/components/icons/ArrowRightRedCircle'
+import ArrowRightIcon from '@/components/icons/ArrowRightCircle'
 
 let list = []
 for (let i = 0; i < 10; i ++) {
@@ -43,7 +43,7 @@ for (let i = 0; i < 10; i ++) {
 
 export default {
   name: 'HomeRecommend',
-  components: { ArrowRightRedIcon },
+  components: { ArrowRightIcon },
   data() {
     return {
       list
@@ -75,6 +75,7 @@ export default {
   height: 620px;
 }
 .content {
+  display: block;
   border: 1px solid rgb(237, 237, 237);
   .image {
     width: 100%;
@@ -149,13 +150,17 @@ export default {
   justify-content: space-between;
   background-color: #ff0058;
   align-items: center;
-  padding-right: 30px;
-  padding-left: 20px;
+  padding: 0 20px;
   height: 86px;
   color: #fff;
   font-size: 28px;
   .title {
     font-size: 24px;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+    stroke: #ff0058;
   }
 }
 </style>

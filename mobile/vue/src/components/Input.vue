@@ -76,6 +76,7 @@ export default {
 .clear-icon {
   width: 32px;
   height: 32px;
+  color: #fff;
 }
 
 .input-item:hover .clear,

@@ -1,8 +1,8 @@
 <template>
   <header>
-    <i v-if="$router.options.routes.length > 1" class="goback" @click="$router.back()">
+    <div v-if="$router.options.routes.length > 1" class="goback" @click="$router.back()">
       <ArrowLeftIcon class="goback-icon"/>
-    </i>
+    </div>
     {{ title }}
   </header>
 </template>
@@ -45,7 +45,7 @@ header {
 
   .goback-icon {
     width: 20px;
-    height: 30px;
+    color: #666;
   }
 }
 </style>

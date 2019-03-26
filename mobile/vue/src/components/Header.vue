@@ -22,10 +22,10 @@
 
 <script>
 import Cookies    from 'js-cookie'
-import MenuIcon   from './icons/Menu'
-import SearchIcon from './icons/Search'
-import UserIcon   from './icons/User'
-import UserNav    from './UserNav'
+import MenuIcon   from '@/components/icons/Menu'
+import SearchIcon from '@/components/icons/Search'
+import UserIcon   from '@/components/icons/User'
+import UserNav    from '@/components/UserNav'
 
 export default {
   name: 'Header',
@@ -98,7 +98,7 @@ export default {
   .menu-icon {
     width: 60px;
     height: 60px;
-    opacity: 0.9;
+    color: #fff;
   }
   .login {
     font-size: 28px;
@@ -127,7 +127,7 @@ export default {
     margin: 20px;
     width: 29px;
     height: 32px;
-    opacity: 0.3;
+    color: #999;
     transition: transform 300ms ease;
     transform: scaleX(1);
   }
@@ -162,6 +162,7 @@ export default {
     height: 60px;
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+    color: #fff;
     .icon {
       width: 60px;
       height: 60px;

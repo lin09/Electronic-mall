@@ -52,6 +52,7 @@ export default {
   transition: all 300ms ease;
   transform: translateY(0);
   z-index: 1000;
+  color: #666;
 
   &.active {
     opacity: 1;

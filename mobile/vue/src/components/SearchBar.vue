@@ -64,6 +64,7 @@ export default {
   }
   .arrow-icon {
     width: 25px;
+    color: #666;
   }
   .input {
     padding: 0 20px;
@@ -83,8 +84,7 @@ export default {
   }
   .searh-icon {
     width: 40px;
-    height: 40px;
-    opacity: 0.6;
+    color: #666;
   }
 }
 </style>
