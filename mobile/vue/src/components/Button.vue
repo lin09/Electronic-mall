@@ -39,6 +39,10 @@ export default {
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 
+  &.border {
+    border: 1px solid rgb(255, 0, 54);
+  }
+
   &.red {
     background-color: rgb(255, 0, 54);
     color: #fff;
