@@ -1,15 +1,17 @@
 <template>
   <div class="detail-page">
     <DetailHeader :nav-index="navIndex" :nav-list="navList" @navChange="handleNavChange"/>
+    <DetailFooter/>
   </div>
 </template>
 
 <script>
 import DetailHeader  from '@/components/detail/Header'
+import DetailFooter  from '@/components/detail/Footer'
 
 export default {
   name: 'DetailPage',
-  components: { DetailHeader },
+  components: { DetailHeader, DetailFooter },
   data() {
     return {
       navIndex: 0,
@@ -17,9 +19,9 @@ export default {
     }
   },
   methods: {
-    // handleNavChange (index) {
-    //   console.log(index)
-    // }
+    handleNavChange (index) {
+      window.console.log(index)
+    }
   },
 }
 </script>
