@@ -21,9 +21,11 @@
     </section>
     <section class="synopsis">
       <h3>价格说明</h3>
-      <p><span>划线价格：</span>指商品的专柜价、吊牌价、正品零售价、厂商指导价或该商品的曾经展示过的销售价等，<strong>并非原价</strong>，仅供参考。</p>
-      <p><span>未划线价格：</span>指商品的<strong>实时标价</strong>，不因表述的差异改变性质。具体成交价格根据商品参加活动，或会员使用优惠券、积分等发生变化最终以订单结算页价格为准。</p>
-      <p>此说明仅当出现价格比较时有效，具体请参见《淘宝价格发布规范》。若商家单独对划线价格进行说明的，以商家的表述为准。</p>
+      <div class="content">
+        <p><span>划线价格：</span>指商品的专柜价、吊牌价、正品零售价、厂商指导价或该商品的曾经展示过的销售价等，<strong>并非原价</strong>，仅供参考。</p>
+        <p><span>未划线价格：</span>指商品的<strong>实时标价</strong>，不因表述的差异改变性质。具体成交价格根据商品参加活动，或会员使用优惠券、积分等发生变化最终以订单结算页价格为准。</p>
+        <p>此说明仅当出现价格比较时有效，具体请参见《淘宝价格发布规范》。若商家单独对划线价格进行说明的，以商家的表述为准。</p>
+      </div>
     </section>
   </article>
 </template>
@@ -124,20 +126,27 @@ img {
   width: 100%;
 }
 .synopsis {
-  padding: 20px;
   h3 {
-    margin-bottom: 30px;
-    font-size: 14px;
+    padding-left: 20px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 28px;
     color: #333;
     font-weight: 400;
   }
+  .content {
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
   p {
-    margin-top: 22px;
-    line-height: 20px;
-    font-size: 12px;
+    display: inline-block; // 解决字体异常大
+    font-size: 24px;
     color: #999;
     &:last-of-type {
-      font-size: 11px;
+      font-size: 20px;
+    }
+    & + p {
+      margin-top: 22px;
     }
   }
   span,
