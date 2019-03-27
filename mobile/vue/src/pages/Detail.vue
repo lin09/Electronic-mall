@@ -60,6 +60,7 @@
       </div>
     </section>
 
+    <DetailDesc/>
     <DetailFooter/>
   </div>
 </template>
@@ -68,6 +69,7 @@
 import ImageScroll      from '@lin09/image-scroll-vue'
 import DetailHeader     from '@/components/detail/Header'
 import DetailFooter     from '@/components/detail/Footer'
+import DetailDesc       from '@/components/detail/Desc'
 import ArrowRightIcon   from '@/components/icons/ArrowRight'
 import ArrowUPCircleAlt from '@/components/icons/ArrowUpCircleAlt'
 import Button           from '@/components/Button'
@@ -81,7 +83,7 @@ for (let i = 0; i < 5; i ++) {
 
 export default {
   name: 'DetailPage',
-  components: { ImageScroll, DetailHeader, DetailFooter, ArrowRightIcon, Button, ArrowUPCircleAlt },
+  components: { ImageScroll, DetailHeader, DetailFooter, DetailDesc, ArrowRightIcon, Button, ArrowUPCircleAlt },
   data() {
     return {
       navIndex: 0,
@@ -102,7 +104,6 @@ export default {
 
 <style lang="scss" scoped>
 .detail-page {
-  height: 200vh;
   min-height: 100vh;
   background-color: rgb(238, 238, 238);
 }
