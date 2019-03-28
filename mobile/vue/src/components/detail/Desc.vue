@@ -139,7 +139,6 @@ img {
     padding: 20px;
   }
   p {
-    display: inline-block; // 解决字体异常大
     font-size: 24px;
     color: #999;
     &:last-of-type {
